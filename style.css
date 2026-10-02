@@ -79,6 +79,7 @@ a {
 nav {
   display: flex;
   gap: 28px;
+  align-items: center;
 }
 
 nav a {
@@ -448,6 +449,123 @@ h3 {
 }
 
 
+/* RESUME / EDUCATION & EXPERIENCE */
+
+.resume-block {
+  margin-top: 42px;
+}
+
+.resume-label {
+  margin: 0 0 14px !important;
+
+  font-size: 0.74rem !important;
+
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+
+  color: var(--muted) !important;
+}
+
+.resume-card {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding: 30px;
+
+  background: var(--paper);
+
+  border: 1px solid var(--line);
+
+  border-radius: 16px;
+
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.resume-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 28px rgba(17, 17, 17, 0.06);
+}
+
+.resume-main {
+  flex: 1;
+}
+
+.resume-card h3 {
+  margin: 0 0 8px;
+
+  font-size: 1.3rem;
+}
+
+.resume-place {
+  margin: 0 !important;
+
+  font-weight: 600;
+
+  color: var(--ink) !important;
+}
+
+.resume-location {
+  margin: 4px 0 0 !important;
+
+  font-size: 0.9rem;
+
+  color: var(--muted) !important;
+}
+
+.resume-date {
+  white-space: nowrap;
+
+  padding: 7px 12px;
+
+  border: 1px solid var(--line);
+
+  border-radius: 999px;
+
+  font-size: 0.78rem;
+
+  font-weight: 700;
+
+  color: var(--muted);
+}
+
+.accomplishments {
+  margin-top: 24px;
+}
+
+.accomplishments-title {
+  margin: 0 0 10px !important;
+
+  font-size: 0.85rem !important;
+
+  font-weight: 700;
+
+  color: var(--ink) !important;
+}
+
+.accomplishments ul {
+  margin: 0;
+
+  padding-left: 20px;
+
+  color: var(--muted);
+}
+
+.accomplishments li {
+  margin-bottom: 8px;
+}
+
+.accomplishments li:last-child {
+  margin-bottom: 0;
+}
+
+
 /* CONTACT */
 
 .contact-section {
@@ -497,7 +615,11 @@ footer {
 
 /* RESPONSIVE */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
+
+  nav {
+    gap: 16px;
+  }
 
   .hero-grid {
     grid-template-columns: 1fr;
@@ -515,6 +637,17 @@ footer {
 }
 
 
+/* TABLET */
+
+@media (max-width: 800px) {
+
+  nav a:nth-child(5) {
+    display: none;
+  }
+
+}
+
+
 /* MOBILE */
 
 @media (max-width: 600px) {
@@ -524,11 +657,13 @@ footer {
   }
 
   nav {
-    gap: 14px;
+    gap: 12px;
   }
 
   nav a:nth-child(2),
-  nav a:nth-child(3) {
+  nav a:nth-child(3),
+  nav a:nth-child(4),
+  nav a:nth-child(5) {
     display: none;
   }
 
@@ -546,6 +681,20 @@ footer {
 
   .sample-box {
     padding: 24px;
+  }
+
+  .resume-card {
+    flex-direction: column;
+
+    gap: 18px;
+
+    padding: 24px;
+  }
+
+  .resume-date {
+    align-self: flex-start;
+
+    white-space: normal;
   }
 
   .contact-box,
